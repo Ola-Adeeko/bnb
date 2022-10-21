@@ -1,0 +1,12 @@
+.collection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 3rem;
+
+  .collection-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    // grid-template-rows: auto 2fr auto;
+  }
+}

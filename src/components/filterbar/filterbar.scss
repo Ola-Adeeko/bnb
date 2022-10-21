@@ -1,0 +1,93 @@
+.filter-bar {
+  width: 100%;
+  height: 78px;
+  margin-top: 90px;
+  position: sticky;
+  top: 78px;
+  background: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+  .filter-box {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    .filter-scroll {
+      display: flex;
+      gap: 4rem;
+      height: 100%;
+      align-items: center;
+      width: calc(100% - 120px);
+
+      .MuiTabs-root {
+        width: 100%;
+        align-items: center;
+
+        .MuiTabScrollButton-root {
+          width: 28px;
+          border-radius: 50%;
+          height: 28px;
+          border: 0.5px solid rgba(0, 0, 0, 0.3);
+
+          .Mui-disabled {
+            opacity: 0;
+          }
+        }
+
+        .MuiTabs-flexContainer {
+          display: flex;
+          gap: 3rem;
+
+          .MuiTouchRipple-root {
+            display: none;
+          }
+        }
+        .PrivateTabIndicator-colorSecondary-3 {
+          background-color: #222222;
+        }
+      }
+      .Mui-selected {
+        color: #222222;
+      }
+      .MuiTab-root {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        min-width: fit-content;
+        text-transform: capitalize;
+        padding: 0;
+        border-bottom: 2px solid transparent;
+        transition: all ease 0.2s;
+        color: #333;
+
+        &:hover {
+          color: #222222;
+          border-bottom: 2px solid #717171;
+          opacity: 1;
+        }
+      }
+    }
+    .filter-btn {
+      display: flex;
+      width: max-content;
+      height: 48px;
+      border: 0.5px solid #dddddd;
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #222222;
+      padding: 0 1rem;
+      background-color: #fff;
+
+      .filter-btn-text {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+}
