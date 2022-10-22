@@ -17,7 +17,7 @@ const Navbar = () => {
           <span className="nav-where">Anywhere</span>
           <span className="nav-week">Any week</span>
           <span className="nav-guest">
-            <span className="add-guest">Add guest</span>
+            <span className="add-guest">Add guests</span>
             <span className="guest-icon">
               <IoSearch />
             </span>

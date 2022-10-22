@@ -1,6 +1,5 @@
 .card {
-  max-height: 450px;
-  min-height: 400px;
+  height: 450px;
   width: 100%;
 
   .card-box {
@@ -10,15 +9,93 @@
     flex-direction: column;
     gap: 1rem;
 
+    .MuiMobileStepper-root {
+      opacity: 1;
+      transition: all ease 1000ms;
+    }
+
+    &:hover {
+      .card-scroll {
+        .arrow-left,
+        .arrow-right {
+          display: flex;
+          cursor: pointer;
+        }
+      }
+    }
+
     .card-scroll {
       height: 70%;
       width: 100%;
       border-radius: 20px;
       overflow: hidden;
-      img {
-        width: 100%;
+      position: relative;
+
+      .pagination {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .arrow-left {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-10%, -50%);
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+        color: #717171;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        transition: all ease 2000ms;
+      }
+      .arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-10%, -50%);
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+        color: #717171;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        transition: all ease 2000ms;
+      }
+
+      & > :first-child {
         height: 100%;
-        object-fit: cover;
+        width: 100%;
+
+        .react-swipeable-view-container {
+          width: 100%;
+          height: 100%;
+
+          & > * {
+            overflow: hidden !important;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      .MuiMobileStepper-dot {
+        background-color: #b0b0b0;
+      }
+      .MuiMobileStepper-dotActive {
+        background-color: #fff;
       }
     }
     .card-body {

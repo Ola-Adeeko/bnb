@@ -4,9 +4,12 @@ import { Tabs, Tab } from "@material-ui/core";
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import { filterData } from "../data";
 import { useState } from "react";
+import { filterSearch } from "../../redux/filterSlice";
+import { useDispatch } from "react-redux";
 
 const FilterBar = () => {
   const [active, setActive] = useState(0);
+  const dispatch = useDispatch();
 
   const handleChange = (event, newValue) => {
     setActive(newValue);
@@ -24,7 +27,12 @@ const FilterBar = () => {
             scrollButtons="on"
           >
             {data.map((item) => (
-              <Tab key={item.id} icon={item.icon} label={item.title} />
+              <Tab
+                key={item.id}
+                icon={item.icon}
+                label={item.title}
+                onClick={() => dispatch(filterSearch(item.type))}
+              />
             ))}
           </Tabs>
         </div>
