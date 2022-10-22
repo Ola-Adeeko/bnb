@@ -53,10 +53,20 @@ const Card = ({ rating, location, host, date, price, images }) => {
               activeStep={step}
             />
           </div>
-          <div className="arrow-left" onClick={prevStep}>
+          <div
+            className={step === 0 ? "arrow-left-disabled" : "arrow-left"}
+            onClick={prevStep}
+          >
             <MdKeyboardArrowLeft />
           </div>
-          <div className="arrow-right" onClick={nextStep}>
+          <div
+            className={
+              step === images.length - 1
+                ? "arrow-right-disabled"
+                : "arrow-right"
+            }
+            onClick={nextStep}
+          >
             <MdKeyboardArrowRight />
           </div>
           <div className="like-btn" onClick={() => setLike(!like)}>

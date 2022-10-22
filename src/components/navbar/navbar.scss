@@ -9,7 +9,7 @@
 
   .nav-box {
     max-width: 1440px;
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -153,14 +153,17 @@
     cursor: pointer;
   }
 }
-@media (max-width: 47.5em) {
-  /* For Tab-port  47.5em= 760px/16px */
+@media (max-width: 50em) {
+  /* For Tab-port  50em= 800px/16px */
+  .nav-bar {
+    box-shadow: none;
+  }
   .nav-bar .nav-box {
     display: none;
   }
   .nav-bar .nav-box2 {
     max-width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -176,41 +179,47 @@
       gap: 1rem;
       padding: 0.5rem 1rem;
       border: 1px solid #dddddd;
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
       border-radius: 30px;
+
       .nav-search {
         font-size: 20px;
         cursor: pointer;
-      }
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
-      .nav-center {
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-height: 32px;
-
-        .bottom {
-          font-size: 12px;
-          font-weight: 400;
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
-          color: #222222;
-          width: 100%;
-          max-height: 16px;
+        .nav-center {
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
           text-overflow: ellipsis;
           overflow: hidden;
+          max-height: 32px;
+          justify-self: flex-start;
+          align-content: flex-start;
 
-          .n-text {
+          .bottom {
+            font-size: 12px;
+            font-weight: 400;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            color: #222222;
+            width: 100%;
             max-height: 16px;
             text-overflow: ellipsis;
             overflow: hidden;
-          }
 
-          .n-dot {
-            transform: translateY(-3px);
+            .n-text {
+              max-height: 16px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+
+            .n-dot {
+              transform: translateY(-3px);
+            }
           }
         }
       }

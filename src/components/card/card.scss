@@ -45,14 +45,21 @@
         height: 28px;
         width: 28px;
         border-radius: 50%;
-        background-color: #f7f7f7;
+        background-color: #dddddd;
         color: #717171;
         font-size: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
         display: none;
-        transition: all ease 2000ms;
+        transition: all ease 200ms;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+      .arrow-left-disabled {
+        display: none;
       }
       .arrow-right {
         position: absolute;
@@ -62,21 +69,25 @@
         height: 28px;
         width: 28px;
         border-radius: 50%;
-        background-color: #f7f7f7;
+        background-color: #dddddd;
         color: #717171;
         font-size: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
         display: none;
-        transition: all ease 2000ms;
+        transition: all ease 200ms;
+
+        &:hover {
+          background-color: #fff;
+        }
       }
-      .like-btn {
+      .arrow-right-disabled .like-btn {
         position: absolute;
         top: 1rem;
         right: 1rem;
         font-size: 25px;
-        color: #f7f7f7;
+        color: #ff385c;
         cursor: pointer;
       }
 

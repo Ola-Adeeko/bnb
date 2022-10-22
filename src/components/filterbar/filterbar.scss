@@ -11,7 +11,7 @@
   .filter-box {
     height: 100%;
     max-width: 1440px;
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -28,21 +28,6 @@
       .MuiTabs-root {
         width: 100%;
         align-items: center;
-
-        // & > :first-child,
-        // &:nth-child(2) {
-        //   position: absolute;
-        //   top: 50%;
-        //   left: 1rem;
-        //   transform: translateY(-50%);
-        //   z-index: 3;
-        // }
-        // & > :last-child {
-        //   position: absolute;
-        //   top: 50%;
-        //   right: 1rem;
-        //   transform: translateY(-50%);
-        // }
 
         .MuiTabScrollButton-root {
           width: 28px;
@@ -109,8 +94,11 @@
     }
   }
 }
-@media (max-width: 47.5em) {
-  /* For Tab-port  47.5em= 760px/16px */
+@media (max-width: 50em) {
+  /* For Tab-port  50em= 800px/16px */
+  .filter-bar {
+    margin-top: 80px;
+  }
   .filter-bar .filter-box .filter-scroll {
     max-width: 100%;
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.scss";
 import { TfiWorld } from "react-icons/tfi";
 import { RiArrowUpSLine } from "react-icons/ri";
+import { BsMap } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -36,6 +37,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="map-btn">
+        <span>Show map</span>
+        <BsMap />
+      </div>
+      <div className="map-btn2">
+        <span>Map</span>
+        <BsMap />
       </div>
     </div>
   );

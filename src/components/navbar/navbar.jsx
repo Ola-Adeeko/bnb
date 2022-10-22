@@ -45,17 +45,18 @@ const Navbar = () => {
         <div className="nav-boxin">
           <div className="nav-search">
             <IoSearch />
-          </div>
-          <div className="nav-center">
-            <span className="top">Where to?</span>
-            <div className="bottom">
-              <span className="n-text">Anywhere</span>
-              <span className="n-dot">.</span>
-              <span className="n-text">Any week</span>
-              <span className="n-dot">.</span>
-              <span className="n-text">Add guests</span>
+            <div className="nav-center">
+              <span className="top">Where to?</span>
+              <div className="bottom">
+                <span className="n-text">Anywhere</span>
+                <span className="n-dot">.</span>
+                <span className="n-text">Any week</span>
+                <span className="n-dot">.</span>
+                <span className="n-text">Add guests</span>
+              </div>
             </div>
           </div>
+
           <div className="nav-filter">
             <TbAdjustmentsHorizontal />
           </div>

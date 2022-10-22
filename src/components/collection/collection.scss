@@ -1,6 +1,6 @@
 .collection {
   max-width: 1440px;
-  padding: 0 1rem;
+  padding: 0 2rem;
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 60px;
@@ -9,7 +9,6 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4, minmax(200px, 1fr));
-    // grid-template-rows: auto 2fr auto;
   }
 }
 @media (max-width: 75em) {
