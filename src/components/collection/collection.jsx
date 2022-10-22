@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./collection.scss";
 import { cardData } from "../data";
 import Card from "../card/card";
@@ -6,7 +6,12 @@ import { useSelector } from "react-redux";
 
 const Collection = () => {
   const data = cardData;
+
   const filterValue = useSelector((state) => state.filter.value);
+
+  useEffect(() => {
+    document.title = "Vacation Homes";
+  }, []);
 
   const collectionData = data.filter((item) => {
     if (filterValue === 0) {

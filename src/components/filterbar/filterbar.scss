@@ -11,6 +11,7 @@
   .filter-box {
     height: 100%;
     max-width: 1440px;
+    padding: 0 1rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -21,16 +22,33 @@
       gap: 4rem;
       height: 100%;
       align-items: center;
-      width: calc(100% - 120px);
+      max-width: calc(100% - 120px);
+      position: relative;
 
       .MuiTabs-root {
         width: 100%;
         align-items: center;
 
+        // & > :first-child,
+        // &:nth-child(2) {
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 1rem;
+        //   transform: translateY(-50%);
+        //   z-index: 3;
+        // }
+        // & > :last-child {
+        //   position: absolute;
+        //   top: 50%;
+        //   right: 1rem;
+        //   transform: translateY(-50%);
+        // }
+
         .MuiTabScrollButton-root {
           width: 28px;
           border-radius: 50%;
           height: 28px;
+          background-color: #dddddd;
           border: 0.5px solid rgba(0, 0, 0, 0.3);
 
           .Mui-disabled {
@@ -89,5 +107,19 @@
         font-weight: 600;
       }
     }
+  }
+}
+@media (max-width: 47.5em) {
+  /* For Tab-port  47.5em= 760px/16px */
+  .filter-bar .filter-box .filter-scroll {
+    max-width: 100%;
+
+    .MuiTabs-root .MuiTabs-flexContainer {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .filter-bar .filter-box .filter-btn {
+    display: none;
   }
 }

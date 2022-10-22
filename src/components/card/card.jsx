@@ -5,9 +5,11 @@ import SwipeableViews from "react-swipeable-views";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import MobileStepper from "@mui/material/MobileStepper";
 import { useState } from "react";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const Card = ({ rating, location, host, date, price, images }) => {
   const [step, setStep] = useState(0);
+  const [like, setLike] = useState(false);
 
   const maxSteps = images.length;
 
@@ -56,6 +58,13 @@ const Card = ({ rating, location, host, date, price, images }) => {
           </div>
           <div className="arrow-right" onClick={nextStep}>
             <MdKeyboardArrowRight />
+          </div>
+          <div className="like-btn" onClick={() => setLike(!like)}>
+            {like ? (
+              <AiFillHeart />
+            ) : (
+              <AiFillHeart style={{ fill: "rgba(0, 0, 0, 0.7)" }} />
+            )}
           </div>
         </div>
         <div className="card-body">

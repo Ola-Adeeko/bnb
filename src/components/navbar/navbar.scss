@@ -9,6 +9,7 @@
 
   .nav-box {
     max-width: 1440px;
+    padding: 0 1rem;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -19,6 +20,10 @@
       height: 34px;
       .logo {
         height: 100%;
+        cursor: pointer;
+      }
+      .logo2 {
+        display: none;
       }
     }
 
@@ -29,14 +34,22 @@
       padding: 0.5rem 0.5rem;
       border: 1px solid #dddddd;
       border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+      transition: all ease 200ms;
+      cursor: pointer;
       color: #222222;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+      }
 
       & > * {
         padding: 0 1rem;
         border-right: 0.5px solid #999;
         font-size: 14px;
         font-weight: 600;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       & > :last-child {
@@ -67,14 +80,34 @@
       align-items: center;
       font-size: 14px;
       font-weight: 600;
-      gap: 1.5rem;
 
       .host {
         color: #222222;
+        cursor: pointer;
+        padding: 0.8rem 1rem;
+        border-radius: 20px;
+        transition: all ease 200ms;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &:hover {
+          background-color: #ebebeb;
+        }
       }
 
       .world-icon {
         font-size: 16px;
+        cursor: pointer;
+        padding: 0.8rem 0.9rem;
+        border-radius: 50%;
+        transition: all ease 200ms;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: #ebebeb;
+        }
       }
 
       .menu-account {
@@ -85,6 +118,12 @@
         border: 1px solid #dddddd;
         border-radius: 30px;
         padding: 0.3rem 0.5rem 0.3rem 0.7rem;
+        transition: all ease 200ms;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        }
 
         .menu {
           font-size: 16px;
@@ -94,7 +133,97 @@
           height: fit-content;
           display: flex;
           align-items: center;
+          color: #999;
         }
+      }
+    }
+  }
+  .nav-box2 {
+    display: none;
+  }
+}
+@media (max-width: 56.25em) {
+  /* For Tab-port  56.25em= 900px/16px */
+  .nav-bar .nav-box .nav-logo .logo {
+    display: none;
+  }
+  .nav-bar .nav-box .nav-logo .logo2 {
+    display: block;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+@media (max-width: 47.5em) {
+  /* For Tab-port  47.5em= 760px/16px */
+  .nav-bar .nav-box {
+    display: none;
+  }
+  .nav-bar .nav-box2 {
+    max-width: 100%;
+    padding: 0 1rem;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-boxin {
+      height: 56px;
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #dddddd;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+      border-radius: 30px;
+      .nav-search {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .nav-center {
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 32px;
+
+        .bottom {
+          font-size: 12px;
+          font-weight: 400;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          color: #222222;
+          width: 100%;
+          max-height: 16px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          .n-text {
+            max-height: 16px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          .n-dot {
+            transform: translateY(-3px);
+          }
+        }
+      }
+      .nav-filter {
+        font-size: 20px;
+        height: 36px;
+        min-width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #dddddd;
+        cursor: pointer;
       }
     }
   }
