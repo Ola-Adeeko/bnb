@@ -55,7 +55,7 @@
         transition: all ease 200ms;
 
         &:hover {
-          background-color: #fff;
+          background-color: #f7f7f7;
         }
       }
       .arrow-left-disabled {
@@ -77,12 +77,11 @@
         align-items: center;
         display: none;
         transition: all ease 200ms;
-
         &:hover {
-          background-color: #fff;
+          background-color: #f7f7f7;
         }
       }
-      .arrow-right-disabled .like-btn {
+      .like-btn {
         position: absolute;
         top: 1rem;
         right: 1rem;

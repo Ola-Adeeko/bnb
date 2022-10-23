@@ -28,6 +28,7 @@
       .MuiTabs-root {
         width: 100%;
         align-items: center;
+        border-bottom: 2px solid transparent;
 
         .MuiTabScrollButton-root {
           width: 28px;
@@ -51,6 +52,7 @@
         }
         .PrivateTabIndicator-colorSecondary-3 {
           background-color: #222222;
+          font-size: 5px;
         }
       }
       .Mui-selected {

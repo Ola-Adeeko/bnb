@@ -5,7 +5,7 @@ import SwipeableViews from "react-swipeable-views";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import MobileStepper from "@mui/material/MobileStepper";
 import { useState } from "react";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 
 const Card = ({ rating, location, host, date, price, images }) => {
   const [step, setStep] = useState(0);
